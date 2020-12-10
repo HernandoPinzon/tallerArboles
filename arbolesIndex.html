@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/pruebas.css" />
+    <link type="text/css" rel="stylesheet" href="css/prueba2.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <p>
+            Seleccione un archivo JSON
+        </p>
+        <input type="file" id="file-input" />
+        <p></p>
+        <div class="input-field col s6">
+            <input id="addText" type="number" class="validate">
+            <label for="addText">Ingrese un valor</label>
+        </div>
+        <div class="input-field col s6">
+            <a class="waves-effect waves-light btn" onclick="agregar()">Añadir nodo</a>
+            <a class="waves-effect waves-light btn" onclick="eliminar()">Eliminar nodo</a>
+            <a class="waves-effect waves-light btn" onclick="buscar()">Buscar nodo</a>
+            <a class="waves-effect waves-light btn" onclick="defaultCircles()">Default</a>
+        </div>
+
+        <div class="input-field col s6">
+
+            <p>Metodos para recorrer arbol</p>
+            <select class="browser-default" id="listaRecorridos">
+                <option value="" disabled selected>Elegir tipo de recorrido</option>
+                <option value="1">InOrden</option>
+                <option value="2">PreOrden</option>
+                <option value="3">PostOrden</option>
+                <option value="4">Amplitud</option>
+            </select>
+            <a class="waves-effect waves-light btn" onclick="recorrerArbol()">Recorrer arbol</a>
+            <p id="resultadoRecorrido">
+                <br>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="usable"></div>
+    <!-- <script src="js/pruebas.js"></script> -->
+    <script src="js/arboles.js"></script>
+</body>
+
+</html>
